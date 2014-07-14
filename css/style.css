@@ -11,3 +11,24 @@ h1,h2,h3,h4 {
 .top-bar {
     height: 45px;
 }
+nav.top-bar {
+	text-align:center;
+}
+section.top-bar-section {
+	display: inline-block;
+	font-size: 15pt;
+}
+.top-bar-link a{
+	color: #ffffff;
+}
+.top-bar-section ul li > a {
+	font-family: VarsityRegular;
+	font-size: 15pt;
+	color: white;
+}
+.top-bar-name {
+	color: #990000 !important;
+}
+/*.top-bar-section li a:not(.button) {
+   color:#990000;
+}*/

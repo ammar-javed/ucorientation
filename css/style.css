@@ -1,0 +1,13 @@
+@font-face {
+	font-family:VarsityRegular;
+	src:url(../fonts/varsity_regular.ttf)
+}
+h1,h2,h3,h4 {
+	font-family:VarsityRegular;
+}
+.header-logo {
+	height:45px;
+}
+.top-bar {
+    height: 45px;
+}

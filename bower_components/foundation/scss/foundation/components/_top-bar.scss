@@ -491,9 +491,11 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
               line-height: $topbar-height;
               background: $topbar-link-bg;
               &:hover {
-                background-color: $topbar-link-bg-color-hover;
-                @if ($topbar-link-bg-hover) {
-                  background: $topbar-link-bg-hover;
+                &:not(.header-name){
+                  background-color: $topbar-link-bg-color-hover;
+                  @if ($topbar-link-bg-hover) {
+                    background: $topbar-link-bg-hover;
+                  }
                 }
               }
             }

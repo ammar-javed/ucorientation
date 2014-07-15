@@ -2,6 +2,13 @@
 	font-family:VarsityRegular;
 	src:url(../fonts/varsity_regular.ttf)
 }
+body {
+	background-color: #350000;
+}
+.header-image{
+	margin: 0 0 0 0;
+	padding: 0;
+}
 h1,h2,h3,h4 {
 	font-family:VarsityRegular;
 }
@@ -29,6 +36,7 @@ section.top-bar-section {
 .top-bar-name {
 	color: #990000 !important;
 }
-/*.top-bar-section li a:not(.button) {
-   color:#990000;
-}*/
+.page-body{
+	background-color:rgba(0,0,0,0.4);
+	color: #eeeeee;
+}

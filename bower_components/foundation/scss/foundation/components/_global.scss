@@ -234,7 +234,8 @@ $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
 // We use these to control various global styles
-$body-bg: #fff !default;
+$body-bg: #000 !default;
+$body-bg-image: url("../images/page-bg.jpg") !default;
 $body-font-color: #222 !default;
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 $body-font-weight: $font-weight-normal !default;
@@ -376,13 +377,16 @@ $cursor-text-value: text !default;
 
     // Default body styles
     body {
-      background: $body-bg;
+      background:#333333 $body-bg-image;
+      color:#aaaaaa;
+      background-size: repeat-x;
       color: $body-font-color;
       padding: 0;
       margin: 0;
       font-family: $body-font-family;
       font-weight: $body-font-weight;
       font-style: $body-font-style;
+      font-size: 14pt;
       line-height: 1; // Set to $base-line-height to take on browser default of 150%
       position: relative;
       cursor: $cursor-default-value;

@@ -25,6 +25,10 @@ h1,h2,h3,h4 {
 	font-family:VarsityRegular;
 	color: #ffffff;
 }
+h2 {
+	text-align: center;
+	color: #fff;
+}
 .header-logo {
 	height:45px;
 }
@@ -38,10 +42,10 @@ h1,h2,h3,h4 {
 .header-logo-page{
 	display: block;
 	margin: auto;
-	padding: 50px;
+	padding: 60px;
 }
 .top-bar {
-    height: 45px;
+    height: 50px;
 }
 nav.top-bar {
 	text-align:center;

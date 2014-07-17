@@ -7,50 +7,55 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/app.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/bxslider.css"/>
   <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/jquery-ui.css">
+  <link rel='stylesheet' type="text/css" href="bower_components/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/fullcalendar-custom.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/qtip/jquery.qtip.css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-
+  <!--Header Image + logo Section-->
   <div class="header-image-static">
     <image class="header-logo-page" src="images/logo.png"/>
   </div>
-
+  <!--Top bar-->
   <div class=" sticky">
     <nav class="top-bar" data-topbar data-options="sticky_on: large">
       <section class="top-bar-section">
 
         <!-- Left Nav Section -->
         <ul class="left">
+          <!--Left side links -->
           <li>
             <a href="#home">home</a>
           </li>
           <li class="has-dropdown">
             <a href="#about" class="scrollTo">about uc</a>
             <ul class="dropdown">
-              <li><a href="#about">history</a></li>
-              <li><a href="#">residences</a></li>
-              <li><a href="#">commuter life</a></li>
+              <li><a href="#about"><span id="history-link">history</span></a></li>
+              <li><a href="#about"><span id="residence-link">residences</span></a></li>
+              <li><a href="#about"><span id="commuter-link">commuter life</span></a></li>
             </ul>
           </li>
           <li>
-            <a href="#">schedule</a>
+            <a href="#schedule">schedule</a>
           </li>
           <li>
             <a href="#">execs</a>
           </li>
-
-
+          <!--Top Bar Header begin [Monsters...-->
           <li class="name">
             <h1 style="font-size:30pt;"><a href="#" class="header-name" style="color: #8B0000; -webkit-text-stroke: 0.4px #ddd;">monsters</a></h1>
           </li>
+          <!--...(hand.img)...-->
           <li>
             <img src="images/favicon.png" class="header-logo"/>
           </li>
+          <!--...University] End-->
           <li class="name">
             <h1 style="font-size:30pt;"><a href="#" class="header-name" style="color: #8B0000; -webkit-text-stroke: 0.4px #ddd;">university</a></h1>
           </li>
-
-
+          <!--Right side links-->
           <li>
             <a href="#">registration</a>
           </li>
@@ -67,7 +72,7 @@
       </section>
     </nav>
   </div>
-
+  <!--Home-->
   <div class="row page-body extra-margin" id="home">
     <div class="large-12 columns">
       <h2>welcome</h2>
@@ -78,26 +83,91 @@
       <p>We hope to see you in September!</p>
     </div>
   </div>
-
+  <!--About UC section [History, Residence, Commuter Life-->
   <div class="row page-body extra-margin" id="about">
     <div class="large-12 columns">
-      <ul class="bxslider">
-        <li>
-          <div>
-            <h2>history</h2>
-            <p>University College is one of University of Toronto’s seven colleges. Founded in 1853, UC is one of the oldest establishments that you will find around campus! UC students are proud to carry on a tradition of promoting values of inclusivity, respect, and open-mindedness. UC is the home of the University’s Sexual Diversity Studies and Canadian Studies program, to name a few; additionally, UC’s student government is the oldest in Canada.</p>
-            <p>As beautiful as it is, University College does have a scary side. According to UC legend, our main building is haunted by the ghosts of Diabolo and Reznikoff, two craftsmen who fought to the death during UC’s construction. Some say you can still see marks in the wall from their intense axe battle…! Decades later, an annual College formal event turned into chaos when a fallen lamp erupted into flames, destroying a majority of the building’s interior. University College is not one to forget such harrowing stories, so we have kept them alive: students can grab a hot drink at Diabolo’s, our student-run coffee shop, or a snack at Reznikoff’s, a bright café located in Morrison Hall. Additionally, students always look forward to "Fireball," our annual formal event held in the entire UC building. </p>
-            <p>For many students, transitioning into University may be an overwhelming process. Luckily, each individual involved in Orientation – from Frosh Leaders to Student Life staff – are committed to helping incoming students feel relaxed and at ease from the moment you arrive on campus. If you are interested in learning more about the history, programs, and services offered at UC, visit www.uc.utoronto.ca or visit our "Contact Us" page and e-mail your Orientation co-chairs any questions or concerns!</p>
+      <div class="bxslider" id="about-slider">
+        <div id="history">
+          <h2>history</h2>
+          <p>University College is one of University of Toronto’s seven colleges. Founded in 1853, UC is one of the oldest establishments that you will find around campus! UC students are proud to carry on a tradition of promoting values of inclusivity, respect, and open-mindedness. UC is the home of the University’s Sexual Diversity Studies and Canadian Studies program, to name a few; additionally, UC’s student government is the oldest in Canada.</p>
+          <p>As beautiful as it is, University College does have a scary side. According to UC legend, our main building is haunted by the ghosts of Diabolo and Reznikoff, two craftsmen who fought to the death during UC’s construction. Some say you can still see marks in the wall from their intense axe battle…! Decades later, an annual College formal event turned into chaos when a fallen lamp erupted into flames, destroying a majority of the building’s interior. University College is not one to forget such harrowing stories, so we have kept them alive: students can grab a hot drink at Diabolo’s, our student-run coffee shop, or a snack at Reznikoff’s, a bright café located in Morrison Hall. Additionally, students always look forward to "Fireball," our annual formal event held in the entire UC building. </p>
+          <p>For many students, transitioning into University may be an overwhelming process. Luckily, each individual involved in Orientation – from Frosh Leaders to Student Life staff – are committed to helping incoming students feel relaxed and at ease from the moment you arrive on campus. If you are interested in learning more about the history, programs, and services offered at UC, visit www.uc.utoronto.ca or visit our "Contact Us" page and e-mail your Orientation co-chairs any questions or concerns!</p>
+        </div>
+        <div id="residence">
+          <h2>university college residences</h2>
+          <br>
+          <img src="images/maps/SirDans.png" class="res-img-left"/>
+          <h3 class="sirdans">sir daniel wilson hall</h3>
+          <p>Affectionately known by UC students as “Sir Dan’s,” this southern-most residence building surrounds the beautiful Sir Dan’s quad. Historically an all-male residence, the building is now co-ed and the home of houses Taylor, Jeanneret, Hutton, Loudon, Wallace, and McCaul. Sir Dan’s is attached to Morrison Hall, giving residents easy access to the Howard Ferguson Dining Hall (especially convenient on those cold winter days!).</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <img src="images/maps/Whitney.png" class="res-img-right"/>
+          <h3 class="whitney">whitney hall</h3>
+          <p>Located on the corner of Harbord St. and St. George St., Whitney Hall lays in the shadow of the famous Robarts Library. Home to houses Ferguson, Falconer, Cody, and Mulock, Whitney has a small, peaceful quad that connects conveniently to Harbord Street. Whitney Hall is only a few steps away from Morrison Hall, which contains the dining hall and the delicious Reznikoff’s Café. Additionally, Whitney’s basement contains a small library and an activity room with both pool and ping pong tables.</p>
+          <br><br>
+          <br>
+          <br>
+          <img src="images/maps/Morrison.png" class="res-img-left"/>
+          <h3 class="morrison">morrison hall</h3>
+          <p>The newest of UC’s three residence buildings, Morrison Hall, is located in between Whitney and Sir Dan’s. Students in Wolfe, Perron, Langley, Bratty, and Landberg Lewis are often happy to be a short elevator ride away from the dining hall! This building is also home to Reznikoff’s Café, a popular gathering place for hungry students to spend time outside of classes. Most rooms and common rooms in Morrison have an excellent view of the surrounding city and campus.</p>
+          <br><br>
+          <br><br>
+          <br>
+          <br>
+          <h3>what is a house?</h3>
+          <p>University College is made up of three residence buildings, all of which are further divided into fifteen Houses. Each house may contain around 25 students (sizes vary depending on the building); these students’ residence rooms are located near each other, and each House has its own “Common Room” (these may contain a small kitchen area, a TV, comfy couches, etc.).</p>
+          <p>During Orientation Week, students will have plenty of time to meet students in their own House as well as those in other Houses! Some Orientation events are designed to allow each House to become comfortable with one another and their new residence; during these events, you are sure to learn much more about your own House traditions from your Leaders and Dons. Each House has one or two Dons who will organize exciting House events and act as a resource for their students with regards to academic, personal, or other issues that may arise throughout the year.</p>
+          <p>Use these residence maps to locate your House, become familiar with the locations of other Houses, and get excited about becoming a part of UC!</p>
+        </div>
+        <div id="commuter">
+          <h2>commuter life</h2>
+          <br>
+          <img src="images/commuter1.jpg" class="com-img-right">
+          <p>With the help of the Commuter Student Centre, off-campus life at UC has been made easy! </p>
+          <p>The Commuter Student Center (CSC) opened in 2007 and is an open and accessible space at the University of Toronto. It was designed for commuter students and offers
+            <ul>
+              <li><span id="text-imp">a lounge with cable television</span></li>
+              <li><span id="text-imp">a personal X-Box</span></li>
+              <li><span id="text-imp">a kitchenette (equipped with a coffee maker, a microwave, and a fridge)</span></li>
+              <li><span id="text-imp">a study space</span></li>
+              <li><span id="text-imp">a group study room</span></li>
+              <li><span id="text-imp">rentable lockers</span></li>
+              <li><span id="text-imp">a built in projector screen</span></li>
+            </ul>
+            <br>
+            <p>It’s open Monday to Friday from 8am to 10pm and can be found at 79 St. George Street.</p>
+            <img src="images/commuter2.jpg" class="com-img-left">
+            <p>The University College Off Campus Commission (UCOC) also hosts events at the CSC including regular pancake brunches, X-Box gaming nights, board game parties, trips to Hart House Farm and much more! This welcoming space is a way for students to socialize between classes and feel a sense of community. UCOC’s annual commuter Orientation weekend, MyDefinition, will be taking place on <span id="text-imp">August 9th-10th 2014</span>. This event is a great way for commuters to get familiarized with UC and how to get involved as an off-campus student. To register for this retreat please e-mail ucoc@uclit.ca before July 30th 2014.</p>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/foundation/js/foundation.min.js"></script>
-  <script src="bower_components/scrollTo/jquery.scrollTo.min.js"></script>
+  <!--Schedule-->
+  <div class="row page-body extra-margin" id="schedule">
+    <h2>schedule</h2>
+    <div id='calendar' />
+  </div>
+
+  <!--jquery-->
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!--jquiry-ui-->
+  <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>  
+  <!--Foundation-->
+  <script type="text/javascript" src="bower_components/foundation/js/foundation.min.js"></script>
+  <!--bxslider-->
   <script type="text/javascript" src="bower_components/bxslider/jquery.bxslider.js"></script>
-  <script src="js/app.js"></script>
+  <!--Moment-->
+  <script type="text/javascript" src='bower_components/moment/moment.min.js'></script>
+  <!--Fullcalendar-->
+  <script type="text/javascript" src='bower_components/fullcalendar/fullcalendar.js'></script>
+  <!--qTip-->
+  <script type="text/javascript" src='bower_components/qtip/jquery.qtip.min.js'></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/calendar.js"></script>  
+</div>
 </body>
 </html>

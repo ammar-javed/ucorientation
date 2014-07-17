@@ -1,7 +1,12 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).ready(function(){
-  $('.bxslider').bxSlider();
+  var slider = $('.bxslider').bxSlider({
+                                        mode: "fade",
+                                        adaptiveHeight: true,
+                                        controls: false,
+                                        pager: true
+                                        });
   $(function() {
         // Slow slides for internal links
         $('a[href*=#]:not([href=#])').click(function() {
@@ -21,5 +26,15 @@ $(document).ready(function(){
             }
         }); 
     });
+  $("#history-link").click(function() {
+    slider.goToSlide(0);
+  });
+  $("#residence-link").click(function() {
+    slider.goToSlide(1);
+  });
+  $("#commuter-link").click(function() {
+    slider.goToSlide(2);
+  });
 });
+
 $(document).foundation();

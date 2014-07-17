@@ -1,0 +1,15 @@
+.fc-agenda-slots td {
+	background: #333;
+	font-size: 13pt;
+}
+.fc-event, .fc-event-vert, .fc-event.start, .fc-event.end {
+	font-size: 10pt;
+}
+.fc-event-time {
+	font-size: 8pt;
+	text-align: center;
+	padding-top: 10px;
+}
+.fc-event-title {
+	text-align: center;
+}

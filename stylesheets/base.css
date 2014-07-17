@@ -25,8 +25,12 @@ h1,h2,h3,h4 {
 	font-family:VarsityRegular;
 	color: #ffffff;
 }
-h2 {
+h2, h3 {
 	text-align: center;
+	color: #fff;
+}
+h3 .whitney {
+	text-align: left;
 	color: #fff;
 }
 .header-logo {
@@ -70,9 +74,36 @@ section.top-bar-section {
 	color: #eeeeee;
 	margin: auto;
 }
+#text-imp{
+	color: #3A9ECF;
+}
 .extra-margin {
   margin-top: 30px !important; /* change the values to anything that you want */
   margin-bottom: 30px !important;
   padding-left: 30px;
   padding-right: 30px;
+}
+.res-img-left{
+	float:left;
+	width: 30%;
+	height: 30%;
+	margin: 30px;
+}
+.res-img-right{
+	float:right;
+	width: 30%;
+	height: 30%;
+	margin: 30px;
+}
+.com-img-right{
+	float:right;
+	width: 50%;
+	height: 50%;
+	margin: 30px;
+}
+.com-img-left{
+	float:left;
+	width: 50%;
+	height: 30%;
+	margin: 30px;
 }

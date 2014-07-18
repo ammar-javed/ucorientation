@@ -3,10 +3,6 @@
 	src:url(../fonts/varsity_regular.ttf)
 }
 @font-face {
-	font-family:helvetica;
-	src:url(../fonts/HelveticaNeueDeskUI.ttc)
-}
-@font-face {
 	font-family:Bree;
 	src:url(../fonts/BreeSerif-Regular.otf);
 }
@@ -106,4 +102,7 @@ section.top-bar-section {
 	width: 50%;
 	height: 30%;
 	margin: 30px;
+}
+.exec-img {
+	clip-path: url(#exec-clipping);
 }

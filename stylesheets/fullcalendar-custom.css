@@ -13,3 +13,12 @@
 .fc-event-title {
 	text-align: center;
 }
+.popup-title {
+	font-family: OpenSans;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.popup-text {
+	padding-left: 10px;
+	padding-right: 10px;
+}

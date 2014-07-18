@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
   <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/jquery-ui.css">
   <link rel='stylesheet' type="text/css" href="bower_components/fullcalendar/fullcalendar.css" />
-  <link rel="stylesheet" type="text/css" href="stylesheets/fullcalendar-custom.css" />
   <link rel="stylesheet" type="text/css" href="bower_components/qtip/jquery.qtip.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/fullcalendar-custom.css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
@@ -41,7 +41,7 @@
             <a href="#schedule">schedule</a>
           </li>
           <li>
-            <a href="#">execs</a>
+            <a href="#execs">execs</a>
           </li>
           <!--Top Bar Header begin [Monsters...-->
           <li class="name">
@@ -145,11 +145,22 @@
       </div>
     </div>
   </div>
-
   <!--Schedule-->
   <div class="row page-body extra-margin" id="schedule">
-    <h2>schedule</h2>
-    <div id='calendar' />
+    <h2 id="schedule-title">schedule</h2>
+    <p style="text-align: center;">Click on an event to learn more about it!</p>
+    <div id='calendar'></div>
+  </div>
+  <!--Execs-->
+  <div class="row page-body extra-margin" id="execs">
+    <svg>
+      <defs>
+        <clipPath id="exec-clipping">
+          <circle cx="284" cy="213" r="213" />
+        </clipPath>
+      </defs>
+    </svg>
+
   </div>
 
   <!--jquery-->
@@ -167,7 +178,9 @@
   <!--qTip-->
   <script type="text/javascript" src='bower_components/qtip/jquery.qtip.min.js'></script>
   <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript" src="js/calendar.js"></script>  
+  <script type="text/javascript" src="js/calendar.js"></script>
+  <script type="text/javascript" src="js/execs.js"></script>  
+
 </div>
 </body>
 </html>

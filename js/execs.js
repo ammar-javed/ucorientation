@@ -51,7 +51,7 @@ $(window).scroll(function(event) {
 				fname: "subothan",
 				lname: "inpanathan",
 				events: "Events: <span id='text-imp'>Beach, Midnight Madness</span>",
-				description: "Nickname: <span id='text-imp'> <span id='text-imp'>Subo</span><br><br>Program: <span id='text-imp'>Double major in Molecular Genetics & Microbiology and Health & Disease</span><br><br>Favourite Part of UC Orientation: <br><span id='text-imp'>Meeting new people and the chance to help people rediscover themselves! Oh and everything else about, cause UC is just that awesome! </span><br><br>You are spending the night in a haunted house. What is the one thing you choose to take with you? <br><span id='text-imp'>A green lantern power ring, cause with the power of imagination its all gonna be hakuna matata! </span><br><br>If you could be any monster, which would you choose? <br><span id='text-imp'>I would be a Lycan ( Underworld >> Twilight werewolves). Nuff said.</span>",
+				description: "Nickname: <span id='text-imp'>Subo</span><br><br>Program: <span id='text-imp'>Double major in Molecular Genetics & Microbiology and Health & Disease</span><br><br>Favourite Part of UC Orientation: <br><span id='text-imp'>Meeting new people and the chance to help people rediscover themselves! Oh and everything else about, cause UC is just that awesome! </span><br><br>You are spending the night in a haunted house. What is the one thing you choose to take with you? <br><span id='text-imp'>A green lantern power ring, cause with the power of imagination its all gonna be hakuna matata! </span><br><br>If you could be any monster, which would you choose? <br><span id='text-imp'>I would be a Lycan ( Underworld >> Twilight werewolves). Nuff said.</span>",
 				image: "images/team/Subo.png"
 			},
 			{

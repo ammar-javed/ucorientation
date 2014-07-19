@@ -121,3 +121,12 @@ section.top-bar-section {
 .hidden {
 	display:none;
 }
+label {
+	color: #fff;
+}
+label small {
+	color: #3A9ECF;
+}
+.error > label > small {
+	color: #3A9ECF;
+}

@@ -16,7 +16,7 @@ $(document).ready(function(){
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top - 30
-                    }, 1000);
+                    }, 1500);
                     if ($(window).width() < 600)
                     {
                         $('nav ul').slideUp();

@@ -4,12 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>University College Orientation</title>
+  <!--Foundation-->
   <link rel="stylesheet" type="text/css" href="stylesheets/app.css" />
+  <!--bxslider-->
   <link rel="stylesheet" type="text/css" href="stylesheets/bxslider.css"/>
+  <!--Custom css-->
   <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
+  <!--jquery ui-->
   <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/jquery-ui.css">
+  <!--full calendar-->
   <link rel='stylesheet' type="text/css" href="bower_components/fullcalendar/fullcalendar.css" />
+  <!--qtip-->
   <link rel="stylesheet" type="text/css" href="bower_components/qtip/jquery.qtip.css" />
+  <!--full calendar override-->
   <link rel="stylesheet" type="text/css" href="stylesheets/fullcalendar-custom.css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
@@ -57,7 +64,7 @@
           </li>
           <!--Right side links-->
           <li>
-            <a href="#">registration</a>
+            <a href="#registration">registration</a>
           </li>
           <li>
             <a href="#">gallery</a>
@@ -158,6 +165,189 @@
     <div id="execs-div">
     </div>
   </div>
+  <!--Registration-->
+  <div class="row page-body extra-margin" id="registration">
+    <h2>register</h2>
+    <form data-abide role='form' method='POST'>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          <div class="fname-field">
+            <label>First Name<small>Required</small>
+              <input type="text" required pattern="[a-zA-Z]+" name='firstName'>
+            </label>
+            <small class="error">Please enter your first name!</small>
+          </div>
+        </div>
+        <div class="medium-6 columns">
+          <div class="lname-field ">
+            <label>Last Name<small>Required</small>
+              <input type="text" required pattern="[a-zA-Z]+" name='lastName'>
+            </label>
+            <small class="error">Please enter your last name!</small>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="medium-6 columns">
+          <div class="homePhone-field">
+            <label>Home Phone <small>Required</small>
+              <input type='text' required pattern="^\+?\d+(-\d+)*$" name='homePhone'>
+            </label>
+            <small class="error">Please enter your home phone number!</small>
+          </div>
+        </div>
+        <div class="medium-6 columns">
+          <div class="cellPhone-field">
+            <label>Cell Phone <small>Required</small>
+              <input type='text' required pattern="^\+?\d+(-\d+)*$" name='cellPhone'>
+            </label>
+            <small class="error">Please enter your cell phone number!</small>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          <div class="email-field">
+            <label>Email <small>Required</small>
+              <input type="email" required>
+            </label>
+            <small class="error">Please enter your e-mail address</small>
+          </div>
+        </div>
+        <div class="medium-6 columns">
+          <div class="birthdate-field">
+            <label>Date of birth <small>Required</small>
+              <input type='text' required pattern="MONTH_DAY_YEAR" name='birthDate' placeholder="mm/dd/yyyy">
+            </label>
+            <small class='error'>Please enter your date of birth</small>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="medium-6 columns">
+          <label>Gender<small>Required</small>
+            <input type='text' required pattern='alpha' name='gender'>
+          </label>
+          <small class='error'>Please fill in what gender you identify with!</small>
+        </div>
+        <div class='medium-6 columns'>
+          <label>Program of Study<small>Required</small>
+          <select name='programStudy' required>
+            <option value='computerScience'>Computer Science</option>
+            <option value='lifeScience'>Life Sciences</option>
+            <option value='humanities'>Humanities</option>
+            <option value='socialScience'>Social Science</option>
+            <option value='rotmanCommerce'>Rotman Commerce</option>
+            <option value='physicalMathScience'>Physical and Mathematical Sciences</option>
+            <option value='architecture'>Architecture</option>
+            <option value='engineering'>Engineering</option>
+          </select>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-8 columns'>
+          <p id='text-imp'>If you have multiple dietary restrictions and/or allergies, please note that you will be contacted in regards to what foods you eat. We also do not serve any pork, fish or any other kind of seafood!</p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          <label>Dietary Restrictions</label>
+          <small>Select all that apply!</small><br>
+          <input name='dietaryRestrictions' id="Halal" type="checkbox"><label for="Halal">Halal</label><br>
+          <input name='dietaryRestrictions' id="Kosher" type="checkbox"><label for="Kosher">Kosher</label><br>
+          <input name='dietaryRestrictions' id="No-beef" type="checkbox"><label for="No-beef">No Beef</label><br>
+          <input name='dietaryRestrictions' id="veg" type="checkbox"><label for="veg">Vegetarian</label><br>
+          <input name='dietaryRestrictions' id="vegan" type="checkbox"><label for="vegan">Vegan</label><br>
+          <input name='dietaryRestrictions' id="glufree" type="checkbox"><label for="glufree">Gluten Free</label><br>
+          <input name='dietaryRestrictions' id="lacfree" type="checkbox"><label for="lacfree">Lactose Free</label><br>
+          <input name='dietaryRestrictions' id="Kosher" type="checkbox"><label for="Kosher">Kosher</label><br>
+          <input name='dietaryRestrictions' id="other" type="checkbox"><label for="other">Other</label>
+          <input name='dietaryRestrictions' id="other" type="text"><br>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 columns'>
+            <label>Allergies
+              <input type='text' pattern="alpha_numeric" name='allergies'>
+            </label>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-8 columns'>
+          <p id='text-imp'>The University of Toronto is committed to providing an accessible environment for all individuals. If you have any accessibility needs, please state them here.</p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-8 columns'>
+          <label>Accessibility Needs: </label>
+          <textarea name='accessibility'></textarea>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 columns'>
+            <label>Emergency Contact First Name<small>Required</small>
+              <input type="text" required pattern="[a-zA-Z]+" name='emergencyFirstName'>
+            </label>
+            <small class="error">Please enter your contact's first name!</small>
+        </div>
+        <div class="medium-6 columns">
+            <label>Emergency Contact Last Name<small>Required</small>
+              <input type="text" required pattern="[a-zA-Z]+" name='emergencyLastName'>
+            </label>
+            <small class="error">Please enter your contact's last name!</small>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="medium-6 columns">
+            <label>Emergency Contact Home Phone <small>Required</small>
+              <input type='text' required pattern="^\+?\d+(-\d+)*$" name='emergencyPhone'>
+            </label>
+            <small class="error">Please enter your contact's home phone number!</small>
+        </div>
+        <div class="medium-6 columns">
+            <label>Relation to you<small>Required</small>
+              <input type='text' required pattern="^\+?\d+(-\d+)*$" name='emergencyRelation'>
+            </label>
+            <small class="error">What is their relation to you?</small>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-8 columns'>
+          <p id='text-imp'>Personal information provided on this form is intended for registration purposes only and will be kept strictly confidential.</p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          <label>May we disclose this information to your frosh leader?<small>Required</small>
+          <select name='discloseLeader' required>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+          </select>
+        </div>
+        <div class='medium-6 columns'>
+          <label>Will you be living on residence?<small>Required</small>
+          <select name='residence' required>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+          </select>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          <label>Please select your T-shirt size<small>Required</small>
+          <select name='tshirtSize' required>
+            <option value='s'>Small</option>
+            <option value='m'>Medium</option>
+            <option value='l'>Large</option>
+            <option value='xl'>X Large</option>
+            <option value='xxl'>XX Large</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <button type="submit">Pay and Register</button>
+    </form>
+  </div>
 
   <!--jquery-->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -165,6 +355,8 @@
   <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>  
   <!--Foundation-->
   <script type="text/javascript" src="bower_components/foundation/js/foundation.min.js"></script>
+  <!--Foundation Topbar-->
+  <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
   <!--bxslider-->
   <script type="text/javascript" src="bower_components/bxslider/jquery.bxslider.js"></script>
   <!--Moment-->
@@ -173,9 +365,14 @@
   <script type="text/javascript" src='bower_components/fullcalendar/fullcalendar.js'></script>
   <!--qTip-->
   <script type="text/javascript" src='bower_components/qtip/jquery.qtip.min.js'></script>
+  <!--Stripe-->
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <!--Abide-->
+  <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/calendar.js"></script>
-  <script type="text/javascript" src="js/execs.js"></script>  
+  <script type="text/javascript" src="js/execs.js"></script>
 
 </div>
 </body>

@@ -23,7 +23,7 @@ $(window).scroll(function(event) {
             show: false,
             hide: false,
             style: {
-                classes: 'qtip-youtube',
+                classes: 'qtip-youtube'
             }
         }).qtip('api');
 

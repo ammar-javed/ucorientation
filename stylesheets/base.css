@@ -10,10 +10,10 @@
 	font-family:OpenSans;
 	src:url(../fonts/OpenSans-Regular.ttf);
 }
-body{
+body {
 	font-family: OpenSans;
 }
-.header-image{
+.header-image {
 	margin: 0 0 0 0;
 	padding: 0;
 }
@@ -32,20 +32,20 @@ h3 .whitney {
 .header-logo {
 	height:45px;
 }
-.header-image-static{
+.header-image-static {
 	background:#333333 url("../images/header2.jpg");
 	position: float;
 	color:#6a6969;
 	background-size: 100%;
 	height: 500px;
 }
-.header-logo-page{
+.header-logo-page {
 	display: block;
 	margin: auto;
 	padding: 60px;
 }
 .top-bar {
-    height: 50px;
+	height: 50px;
 }
 nav.top-bar {
 	text-align:center;
@@ -54,7 +54,7 @@ section.top-bar-section {
 	display: inline-block;
 	font-size: 15pt;
 }
-.top-bar-link a{
+.top-bar-link a {
 	color: #ffffff;
 }
 .top-bar-section ul li > a {
@@ -65,44 +65,59 @@ section.top-bar-section {
 .top-bar-name {
 	color: #990000 !important;
 }
-.page-body{
+.page-body {
 	background-color:rgba(0,0,0,0.4);
 	color: #eeeeee;
 	margin: auto;
 }
-#text-imp{
+#text-imp {
 	color: #3A9ECF;
 }
-.extra-margin {
-  margin-top: 30px !important; /* change the values to anything that you want */
-  margin-bottom: 30px !important;
-  padding-left: 30px;
-  padding-right: 30px;
+.popup-text {
+	font-size: 14px;
 }
-.res-img-left{
+.extra-margin {
+	margin-top: 30px !important; /* change the values to anything that you want */
+	margin-bottom: 30px !important;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.res-img-left {
 	float:left;
 	width: 30%;
 	height: 30%;
 	margin: 30px;
 }
-.res-img-right{
+.res-img-right {
 	float:right;
 	width: 30%;
 	height: 30%;
 	margin: 30px;
 }
-.com-img-right{
+.com-img-right {
 	float:right;
 	width: 50%;
 	height: 50%;
 	margin: 30px;
 }
-.com-img-left{
+.com-img-left {
 	float:left;
 	width: 50%;
 	height: 30%;
 	margin: 30px;
 }
+#execs-div {
+	vertical-align: middle;
+	margin: 20px;
+}
 .exec-img {
-	clip-path: url(#exec-clipping);
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
+	border-radius:80%;
+	width: 14%;
+	height: 14%;
+	margin: 25px;
+}
+.hidden {
+	display:none;
 }

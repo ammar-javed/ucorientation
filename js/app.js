@@ -1,7 +1,6 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 var registrationSlider;
-var safariSubmited;
 
 var showRegSlider = function() {
     $('#form-one')[0].reset();
@@ -10,14 +9,11 @@ var showRegSlider = function() {
     scrollToElement('#registration');
 }
 
-var test = function(e) {
-  console.log(e);
-}
-
 var hideReg = function(){
   $('#form-one')[0].reset();
   $('#payment-form')[0].reset();
   $('#registration').hide(500);
+  registrationSlider.goToSlide(0);
 }
 $(document).ready(function(){
   var aboutslider = $('.bxslider').bxSlider({

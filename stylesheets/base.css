@@ -131,3 +131,23 @@ label small {
 .error > label > small {
 	color: #3A9ECF;
 }
+#processing-img {
+	height: 5%;
+	width: 5%;
+	margin:auto;
+}
+#reg-ok {
+	background: #00aa00;
+	margin: 20px;
+}
+#reg-bad {
+	background: #CC0000;
+	margin: 20px;
+}
+.reveal-modal > p {
+	text-align: center;
+	color: #000;
+}
+.reveal-modal > h2 {
+	color: #000;
+}

@@ -52,7 +52,7 @@
           </li>
           <!--Top Bar Header begin [Monsters...-->
           <li class="name">
-            <h1 style="font-size:30pt;"><a href="#" class="header-name" style="color: #8B0000; -webkit-text-stroke: 0.4px #ddd;">monsters</a></h1>
+            <h1 style="font-size:30pt;"><a href="#" class="header-name" style="color: #8B0000;">monsters</a></h1>
           </li>
           <!--...(hand.img)...-->
           <li>
@@ -60,11 +60,11 @@
           </li>
           <!--...University] End-->
           <li class="name">
-            <h1 style="font-size:30pt;"><a href="#" class="header-name" style="color: #8B0000; -webkit-text-stroke: 0.4px #ddd;">university</a></h1>
+            <h1 style="font-size:30pt;"><a href="#" class="header-name" style="color: #8B0000;">university</a></h1>
           </li>
           <!--Right side links-->
           <li>
-            <a href="#registration">registration</a>
+            <a href="#prices">registration</a>
           </li>
           <li>
             <a href="#">gallery</a>
@@ -165,9 +165,27 @@
     <div id="execs-div">
     </div>
   </div>
+  <!--Registration Info-->
+  <div class='row page-body extra-margin' id='regInfo'>
+    <h2>register</h2>
+    <div class='panel radius' id='prices'>
+      <h4 id='text-imp'>registration costs</h4>
+      <p>
+        Regular<span id='text-imp'>*</span> JULY 1 - AUG 10: <span id='text-imp'>$105</span>
+        <br>
+        Late AUG 10 - AUG 22: <span id='text-imp'>$125</span>
+        <br>
+        Registration Day (September 1): <span id='text-imp'>$140 </span>
+        <br><br>
+        We encourage you register throughout the summer to avoid long lines and disappointment. If you have issues registering, please contact us!
+        <br>
+        <span style='font-size:8pt;' id='text-imp'>* Extended!</span>
+      </p>
+      <button type='button' onClick='showRegSlider()'>Begin Registration</button>
+    </div>
+  </div>
   <!--Registration-->
   <div class="row page-body extra-margin" id="registration">
-    <h2>register</h2>
     <div class='registration-slider'>
       <!--Slide 1-->
       <div>
@@ -235,16 +253,17 @@
             </div>
             <div class='medium-6 columns'>
               <label>Program of Study<small>Required</small>
-              <select name='programStudy' required>
-                <option value='Computer Science'>Computer Science</option>
-                <option value='Life Science'>Life Science</option>
-                <option value='Humanities'>Humanities</option>
-                <option value='Social Science'>Social Science</option>
-                <option value='Rotman Commerce'>Rotman Commerce</option>
-                <option value='Physical and Mathematical Sciences'>Physical and Mathematical Sciences</option>
-                <option value='Architecture'>Architecture</option>
-                <option value='Engineering'>Engineering</option>
-              </select>
+                <select name='programStudy' required>
+                  <option value='Computer Science'>Computer Science</option>
+                  <option value='Life Science'>Life Science</option>
+                  <option value='Humanities'>Humanities</option>
+                  <option value='Social Science'>Social Science</option>
+                  <option value='Rotman Commerce'>Rotman Commerce</option>
+                  <option value='Physical and Mathematical Sciences'>Physical and Mathematical Sciences</option>
+                  <option value='Architecture'>Architecture</option>
+                  <option value='Engineering'>Engineering</option>
+                </select>
+              </label>
             </div>
           </div>
           <div class='row'>
@@ -270,9 +289,9 @@
           </div>
           <div class='row'>
             <div class='medium-6 columns'>
-                <label>Allergies
-                  <input type='text' pattern="alpha_numeric" name='allergies'>
-                </label>
+              <label>Allergies
+                <input type='text' pattern="alpha_numeric" name='allergies'>
+              </label>
             </div>
           </div>
           <div class='row'>
@@ -288,30 +307,30 @@
           </div>
           <div class='row'>
             <div class='medium-6 columns emergencyFirstName'>
-                <label>Emergency Contact First Name<small>Required</small>
-                  <input type="text" required pattern="[a-zA-Z]+" name='emergencyFirstName'>
-                </label>
-                <small class="error">Please enter your contact's first name!</small>
+              <label>Emergency Contact First Name<small>Required</small>
+                <input type="text" required pattern="[a-zA-Z]+" name='emergencyFirstName'>
+              </label>
+              <small class="error">Please enter your contact's first name!</small>
             </div>
             <div class="medium-6 columns emergencyLastName">
-                <label>Emergency Contact Last Name<small>Required</small>
-                  <input type="text" required pattern="[a-zA-Z]+" name='emergencyLastName'>
-                </label>
-                <small class="error">Please enter your contact's last name!</small>
+              <label>Emergency Contact Last Name<small>Required</small>
+                <input type="text" required pattern="[a-zA-Z]+" name='emergencyLastName'>
+              </label>
+              <small class="error">Please enter your contact's last name!</small>
             </div>
           </div>
           <div class='row'>
             <div class="medium-6 columns emergencyPhone">
-                <label>Emergency Contact Home Phone <small>Required</small>
-                  <input type='text' required pattern="^\+?\d+(-\d+)*$" name='emergencyPhone'>
-                </label>
-                <small class="error">Please enter your contact's home phone number!</small>
+              <label>Emergency Contact Home Phone <small>Required</small>
+                <input type='text' required pattern="^\+?\d+(-\d+)*$" name='emergencyPhone'>
+              </label>
+              <small class="error">Please enter your contact's home phone number!</small>
             </div>
             <div class="medium-6 columns emergencyRelation">
-                <label>Relation to you<small>Required</small>
-                  <input type='text' required pattern="[a-zA-Z]+" name='emergencyRelation'>
-                </label>
-                <small class="error">What is their relation to you?</small>
+              <label>Relation to you<small>Required</small>
+                <input type='text' required pattern="[a-zA-Z]+" name='emergencyRelation'>
+              </label>
+              <small class="error">What is their relation to you?</small>
             </div>
           </div>
           <div class='row'>
@@ -322,59 +341,56 @@
           <div class='row'>
             <div class='medium-6 columns'>
               <label>May we disclose this information to your frosh leader?<small>Required</small>
-              <select name='discloseLeader' required>
-                <option value='No'>No</option>
-                <option value='Yes'>Yes</option>
-              </select>
+                <select name='discloseLeader' required>
+                  <option value='No'>No</option>
+                  <option value='Yes'>Yes</option>
+                </select>
               </label>
             </div>
             <div class='medium-6 columns'>
               <label>Will you be living on residence?<small>Required</small>
-              <select name='residence' required>
-                <option value='No'>No</option>
-                <option value='Yes'>Yes</option>
-              </select>
+                <select name='residence' required>
+                  <option value='No'>No</option>
+                  <option value='Yes'>Yes</option>
+                </select>
               </label>
             </div>
           </div>
           <div class='row'>
             <div class='medium-6 columns'>
               <label>Please select your T-shirt size<small>Required</small>
-              <select name='tshirtSize' required>
-                <option value='small'>Small</option>
-                <option value='medium'>Medium</option>
-                <option value='large'>Large</option>
-                <option value='xlarge'>X Large</option>
-                <option value='xxlarge'>XX Large</option>
-              </select>
+                <select name='tshirtSize' required>
+                  <option value='small'>Small</option>
+                  <option value='medium'>Medium</option>
+                  <option value='large'>Large</option>
+                  <option value='xlarge'>X Large</option>
+                  <option value='xxlarge'>XX Large</option>
+                </select>
               </label>
             </div>
           </div>
 
-          <br>
+          <a class='button alert' onClick='hideReg()'>Cancel</a>
+          <button type='button' style='margin-left:3px;margin-top:5px;' id='registerNext'>Next</button>
         </form>
-        <div class='row'>
-          <button id='registerNext'>Next</button>
-        </div>
       </div>
       <!--Slide 2-->
       <div>
-        <h4>payment information</h4>
-        <p>Registration Fee: <span id='text-imp'>$105.00</span></p>
         <form action="" data-abide method="POST" id="payment-form">
-          <span class="payment-errors"></span>
+          <h4>payment information</h4>
+          <span class="payment-errors"></span><br>
           <div class='row'>
             <div class="small-6 columns number">
-                <label>Card Number<small>Required</small>
-                  <input type='text' maxlength='20' required data-stripe='number'>
-                </label>
-                <small class="error">Please enter your credit card number!</small>
+              <label>Card Number<small>Required</small>
+                <input type='text' maxlength='20' required data-stripe='number'>
+              </label>
+              <small class="error">Please enter your credit card number!</small>
             </div>
             <div class="small-2 columns cvc end">
-                <label>CVC<small>Required</small>
-                  <input type='text' required maxlength='4' data-stripe='cvc'>
-                </label>
-                <small class="error">You can find your CVC on the back of the card!</small>
+              <label>CVC<small>Required</small>
+                <input type='text' required maxlength='4' data-stripe='cvc'>
+              </label>
+              <small class="error">You can find your CVC on the back of the card!</small>
             </div>
           </div>
 
@@ -397,21 +413,53 @@
             </div>
           </div>
 
-          <button type="submit" id='finalizeReg'>Submit Payment</button>
+          <button type="submit" style='margin-left:3px;' id='finalizeReg'>Submit Payment</button>
         </form>
       </div>
-      <!--Slide 3: success-->
+      <!--Slide 3: Processing-->
       <div>
-      </div>
-      <!--Slide 4: error ajax fail-->
-      <div>
-        <h3 style='color:red;'>there was an error :( <br> please check your internet connection and try again!<h3>
-      </div>
-      <!--Slide 5: card fail-->
-      <div>
-        <h3 style='color:red;'>registration failed. please check your credit card details and try again. if you can't get a successful registration, contact us at orientation.registration@uclit.ca</h3>
+        <img id='processing-img' src="images/registration/loading.gif" />
+        <h3 style="position:relative;">please wait a moment while we finish your registration</h3>
       </div>
     </div>
+
+  </div>
+
+  <!--Reg Modals-->
+  <div id="success" class="reveal-modal small" data-reveal>
+    <div class='panel radius' id='reg-ok'>
+      <h2>sweet</h2>
+    </div>
+    <p class="lead">Your registration was successful!</p>
+    <p>You will be receiving a confirmation e-mail in the next two weeks with more information!</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <div id="failure-network" class="reveal-modal small" data-reveal>
+    <div class='panel radius' id='reg-bad'>
+      <h2>not sweet</h2>
+    </div>
+    <p class="lead">There was an error :(</p>
+    <p>Please check your internet connect and try again!</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <div id="failure-card" class="reveal-modal small" data-reveal>
+    <div class='panel radius' id='reg-bad'>
+      <h2>not sweet</h2>
+    </div>
+    <p class="lead">Registration Failed! :(</p>
+    <p>Please check your credit card details and try again. If you can't get a successful registration, contact us at <a href="mailto:orientation.registration@uclit.ca?Subject=Credit%20Card%20Failed" target="_top">orientation.registration@uclit.ca</a></p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <div id="failure-incomplete" class="reveal-modal small" data-reveal>
+    <div class='panel radius' id='reg-bad'>
+      <h2>not sweet</h2>
+    </div>
+    <p class="lead">Registration Failed! :(</p>
+    <p>The internet connection seemed to have been interrupted during the process. We got your payment, however we did not receive your form information! Please e-mail us at <a href="mailto:orientation.registration@uclit.ca?Subject=Credit%20Card%20Failed" target="_top">orientation.registration@uclit.ca</a></p>
+    <a class="close-reveal-modal">&#215;</a>
   </div>
 
   <!--jquery-->
@@ -434,14 +482,15 @@
   <script type="text/javascript" src='bower_components/qtip/jquery.qtip.min.js'></script>
   <!--Stripe-->
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script type="text/javascript" src="js/stripe_setup.js"></script>
+  <script type="text/javascript" src="js/finalizeRegist.js"></script>
   <!--Abide-->
   <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <!--Modal-->
+  <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
 
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/calendar.js"></script>
   <script type="text/javascript" src="js/execs.js"></script>
 
-</div>
 </body>
 </html>

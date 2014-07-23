@@ -1,5 +1,24 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
+var registrationSlider;
+var safariSubmited;
+
+var showRegSlider = function() {
+    $('#form-one')[0].reset();
+    $('#payment-form')[0].reset();
+    $('#registration').show();
+    scrollToElement('#registration');
+}
+
+var test = function(e) {
+  console.log(e);
+}
+
+var hideReg = function(){
+  $('#form-one')[0].reset();
+  $('#payment-form')[0].reset();
+  $('#registration').hide(500);
+}
 $(document).ready(function(){
   var aboutslider = $('.bxslider').bxSlider({
                                         mode: "fade",
@@ -8,13 +27,13 @@ $(document).ready(function(){
                                         pager: true
                                         });
 
-
-  var registrationSlider = $('.registration-slider').bxSlider({
+  registrationSlider = $('.registration-slider').bxSlider({
                                       mode: "fade",
                                       adaptiveHeight: true,
                                       controls: false,
                                       pager: false
                                       });
+  $('#registration').hide();
 
   $(function() {
         // Slow slides for internal links
@@ -45,11 +64,11 @@ $(document).ready(function(){
     aboutslider.goToSlide(2);
   });
 
-  $('#form-one').on('invalid', function(){
+  $('#form-one :input').on('invalid', function(){
     registrationSlider.redrawSlider();
   });
 
-  $('#form-one').on('vaild', function(){
+  $('#form-one :input').on('vaild', function(){
     registrationSlider.redrawSlider();
   });
 
@@ -72,33 +91,47 @@ $(document).ready(function(){
   });
 
   $('#registerNext').click(function(){
-    // //Let script know a form was sent
-    // $("#form-one").append("<input type='hidden' name='form' value='true' />");
-    // //serialize and send
-    // formData = $('#form-one').serialize();
-    // $.ajax({
-    //   url : 'scripts/register_validation.php',
-    //   type: 'POST',
-    //   data: formData,
-    //   success: function(data, textStatus, jqXHR){
-    //     reply = JSON.parse(data);
-    //     console.log(data);
-    //     console.log(reply);
-    //     if (reply.result == "success")
-    //     {
+    //Let script know a form was sent
+    $("#form-one").append("<input type='hidden' name='form' value='true' />");
+    //serialize and send
+    formData = $('#form-one').serialize();
+    $.ajax({
+      url : 'scripts/register_validation.php',
+      type: 'POST',
+      data: formData,
+      success: function(data, textStatus, jqXHR){
+        var reply = JSON.parse(data);
+        var topError;
+        if (reply.result == "success")
+        {
           registrationSlider.goToSlide(1);
-    //     } else {
-    //       $.each(reply, function(i, val) {
-    //         $("." + i).addClass(" " + val);
-    //       });
-    //     }
-    //   },
-    //   error: function(jqXHR, textStatus, errorThrown) {
-    //     registrationSlider.goToSlide(3);
-    //   }
-    // });
+        } else {
+          $.each(reply, function(i, val) {
+            $("." + i).addClass(" " + val);
+            if(!topError){
+              topError = "."+i;
+            }
+          });
+          registrationSlider.redrawSlider();
+          scrollToElement(topError);
+        }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        registrationSlider.goToSlide(3);
+      }
+    });
   });
 
 });
+
+var scrollToElement = function(selector, callback){
+    var animation = {scrollTop: $(selector).offset().top-50};
+    $('html,body').animate(animation, 'slow', 'swing', function() {
+        if (typeof callback == 'function') {
+            callback();
+        }
+        callback = null;
+    });
+}
 
 $(document).foundation();

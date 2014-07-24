@@ -1,12 +1,15 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 var registrationSlider;
+var aboutslider;
+var gallery;
+var contactSlider;
 
 var showRegSlider = function() {
-    $('#form-one')[0].reset();
-    $('#payment-form')[0].reset();
-    $('#registration').show();
-    scrollToElement('#registration');
+  $('#form-one')[0].reset();
+  $('#payment-form')[0].reset();
+  $('#registration').show();
+  scrollToElement('#registration');
 }
 
 var hideReg = function(){
@@ -16,40 +19,54 @@ var hideReg = function(){
   registrationSlider.goToSlide(0);
 }
 $(document).ready(function(){
-  var aboutslider = $('.bxslider').bxSlider({
-                                        mode: "fade",
-                                        adaptiveHeight: true,
-                                        controls: false,
-                                        pager: true
-                                        });
+  aboutslider = $('.bxslider').bxSlider({
+    mode: "fade",
+    adaptiveHeight: true,
+    controls: false,
+    pager: true
+  });
 
   registrationSlider = $('.registration-slider').bxSlider({
-                                      mode: "fade",
-                                      adaptiveHeight: true,
-                                      controls: false,
-                                      pager: false
-                                      });
+    mode: "fade",
+    adaptiveHeight: true,
+    controls: false,
+    pager: false
+  });
+  gallery = $('.gallery').bxSlider({
+    mode: "fade",
+    adaptiveHeight: true,
+    auto: true,
+    autoControls: true,
+    autoControlsCombine: true,
+    pager: false
+  });
+  contactSlider = $('.contact').bxSlider({
+    mode: "fade",
+    adaptiveHeight: true,
+    controls: false,
+    pager: false
+  });
   $('#registration').hide();
 
   $(function() {
         // Slow slides for internal links
         $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top - 30
-                    }, 1500);
-                    if ($(window).width() < 600)
-                    {
-                        $('nav ul').slideUp();
-                    }
-                    return false;
-                }
+          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top - 30
+              }, 1500);
+              if ($(window).width() < 600)
+              {
+                $('nav ul').slideUp();
+              }
+              return false;
             }
+          }
         }); 
-    });
+      });
   $("#history-link").click(function() {
     aboutslider.goToSlide(0);
   });
@@ -73,17 +90,17 @@ $(document).ready(function(){
   });
 
   var $input = $('#payment-form :input:text'),
-      $register = $('#finalizeReg');
+  $register = $('#finalizeReg');
 
   $register.attr('disabled', true);
   $input.keyup(function() {
-      var trigger = false;
-      $input.each(function() {
-          if (!$(this).val()) {
-              trigger = true;
-          }
-      });
-      trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
+    var trigger = false;
+    $input.each(function() {
+      if (!$(this).val()) {
+        trigger = true;
+      }
+    });
+    trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
   });
 
   $('#registerNext').click(function(){
@@ -118,16 +135,45 @@ $(document).ready(function(){
     });
   });
 
+  $('#contact-form').submit(function(e) {
+    var $form = $(this);
+
+    // Disable the submit button to prevent repeated clicks
+    $form.find('button').prop('disabled', true);
+    var message = $form.serialize();
+    console.log(message);
+
+    $.ajax({
+      url: "scripts/mail.php",
+      type: "POST",
+      data: message,
+      success: function(data, textStatus, jqXHR){
+        var reply = JSON.parse(data);
+        if(reply.result == 'success'){
+            contactSlider.goToSlide(1);
+        } else {
+            contactSlider.goToSlide(2);
+        }
+      },
+      error: function(jqXHR, textStatus, errorThrown){
+        contactSlider.goToSlide(2);
+      }
+    });
+    $form.find('button').prop('disabled', false);
+    // Prevent the form from submitting with the default action
+    return false;
+  });
+
 });
 
 var scrollToElement = function(selector, callback){
-    var animation = {scrollTop: $(selector).offset().top-50};
-    $('html,body').animate(animation, 'slow', 'swing', function() {
-        if (typeof callback == 'function') {
-            callback();
-        }
-        callback = null;
-    });
+  var animation = {scrollTop: $(selector).offset().top-50};
+  $('html,body').animate(animation, 'slow', 'swing', function() {
+    if (typeof callback == 'function') {
+      callback();
+    }
+    callback = null;
+  });
 }
 
 $(document).foundation();

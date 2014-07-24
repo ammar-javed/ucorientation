@@ -115,9 +115,9 @@ section.top-bar-section {
 	-moz-border-radius:100px;
 	-webkit-border-radius:100px;
 	border-radius:80%;
-	width: 14%;
-	height: 14%;
-	margin: 25px;
+	width: 15%;
+	height: 15%;
+	margin: 20px;
 }
 .hidden {
 	display:none;

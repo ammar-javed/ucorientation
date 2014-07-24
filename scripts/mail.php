@@ -1,20 +1,29 @@
 <?php
+$resultArray = array();
 if($_POST['name'] && $_POST['email'] && $_POST['message']) {
 	$from = $_POST['email'];
-	$to = "orientation@uclit.ca";
+	$to = "ammarj965@gmail.com";
 
-    $subject = "Website Contact Form - ".$_POST['name'];
-    $message = $_POST["message"];
+	$subject = "Website Contact Form - ".$_POST['name'];
+	$message = $_POST["message"];
     // message lines should not exceed 70 characters (PHP rule), so wrap it
-    $message = wordwrap($message, 70);
-    // send mail
-    mail($to,$subject,$message,"From: $from\r\n"."Reply-To: $from\r\n");
+	$message = wordwrap($message, 70);
 
-	header('Location: http://www.ucorientation.com/#/contact');
+    // create email headers
+
+	$headers = 'From: '.$from."\r\n".
+
+	'Reply-To: '.$from."\r\n" .
+
+	'X-Mailer: PHP/' . phpversion();
+    // send mail
+	mail($to,$subject,$message, $headers);
+
 	// perhaps go to a success page instead
-	die();
+	$resultArray["result"] = 'success';
+	echo json_encode($resultArray);
 } else {
-	header('Location: http://www.ucorientation.com/#/contact');
-	die();
+	$resultArray["result"] = 'error';
+	echo json_encode($resultArray);
 }
 ?>

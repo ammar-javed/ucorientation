@@ -67,13 +67,13 @@
             <a href="#prices">registration</a>
           </li>
           <li>
-            <a href="#">gallery</a>
+            <a href="#gallery">gallery</a>
           </li>
           <li>
-            <a href="#">contact us</a>
+            <a href="#contact">contact us</a>
           </li>
           <li>
-            <a href="#">thrive</a>
+            <a href="http://www.uc.utoronto.ca/orientation">thrive</a>
           </li>
         </ul>
       </section>
@@ -162,7 +162,7 @@
   <div class="row page-body extra-margin" id="execs">
     <h2>execs</h2>
     <p style="text-align: center;">Meet the team!</p>
-    <div id="execs-div">
+    <div id="execs-div" class="panel radius">
     </div>
   </div>
   <!--Registration Info-->
@@ -378,6 +378,7 @@
       <div>
         <form action="" data-abide method="POST" id="payment-form">
           <h4>payment information</h4>
+          <p>Current Price <span id='text-imp'>$105.00</span></p>
           <span class="payment-errors"></span><br>
           <div class='row'>
             <div class="small-6 columns number">
@@ -423,7 +424,51 @@
         <h3 style="position:relative;">please wait a moment while we finish your registration</h3>
       </div>
     </div>
-
+  </div>
+  <!--Gallery-->
+  <div class="row page-body extra-margin" id="gallery">
+    <h2>gallery</h2>
+    <ul class="gallery">
+    </ul>
+  </div>
+  <!--Contact-->
+  <div class='row page-body extra-margin' id="contact">
+    <h2>contact us</h2>
+    <div class='contact'>
+      <!--Form-->
+      <div class='panel radius'>
+        <form id='contact-form'>
+          <div class="row">
+            <div class="small-4 columns">
+              <label>Name<small>Required</small>
+                <input type="text" required placeholder="First Last" name='name'/>
+              </label>
+            </div>
+            <div class="small-4 columns end">
+              <label>Email<small>Required</small>
+                <input type="text" required placeholder="user@example.com" name='email'/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-8 columns">
+              <label>Message<small>Required</small>
+                <textarea type="text" required placeholder="message" name='message'></textarea>
+              </label>
+            </div>
+          </div>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
+      <!--success-->
+      <div class='panel radius'>
+        <h4 style='text-align:center'>thank you, we will be in touch shortly</h4>
+      </div>
+      <!--error-->
+      <div class='panel radius'>
+        <h4 style='text-align:center'>there was an error, please check your internet connection and try again</h4>
+      </div>
+    </div>
   </div>
 
   <!--Reg Modals-->
@@ -474,7 +519,7 @@
   <!--Foundation Topbar-->
   <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
   <!--bxslider-->
-  <script type="text/javascript" src="bower_components/bxslider/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="bower_components/bxslider/jquery.bxslider.min.js"></script>
   <!--Moment-->
   <script type="text/javascript" src='bower_components/moment/moment.min.js'></script>
   <!--Fullcalendar-->
@@ -483,7 +528,10 @@
   <script type="text/javascript" src='bower_components/qtip/jquery.qtip.min.js'></script>
   <!--Stripe-->
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <!--Registration-->
   <script type="text/javascript" src="js/finalizeRegist.js"></script>
+  <!--Gallery-->
+  <script type="text/javascript" src="js/gallery.js"></script>
   <!--Abide-->
   <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
   <!--Modal-->

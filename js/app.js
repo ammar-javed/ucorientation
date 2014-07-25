@@ -18,7 +18,19 @@ var hideReg = function(){
   $('#registration').hide(500);
   registrationSlider.goToSlide(0);
 }
+
+var scrollToElement = function(selector, callback){
+  var animation = {scrollTop: $(selector).offset().top-50};
+  $('html,body').animate(animation, 'slow', 'swing', function() {
+    if (typeof callback == 'function') {
+      callback();
+    }
+    callback = null;
+  });
+}
+
 $(document).ready(function(){
+
   aboutslider = $('.bxslider').bxSlider({
     mode: "fade",
     adaptiveHeight: true,
@@ -141,7 +153,6 @@ $(document).ready(function(){
     // Disable the submit button to prevent repeated clicks
     $form.find('button').prop('disabled', true);
     var message = $form.serialize();
-    console.log(message);
 
     $.ajax({
       url: "scripts/mail.php",
@@ -149,10 +160,11 @@ $(document).ready(function(){
       data: message,
       success: function(data, textStatus, jqXHR){
         var reply = JSON.parse(data);
+
         if(reply.result == 'success'){
-            contactSlider.goToSlide(1);
+          contactSlider.goToSlide(1);
         } else {
-            contactSlider.goToSlide(2);
+          contactSlider.goToSlide(2);
         }
       },
       error: function(jqXHR, textStatus, errorThrown){
@@ -165,15 +177,5 @@ $(document).ready(function(){
   });
 
 });
-
-var scrollToElement = function(selector, callback){
-  var animation = {scrollTop: $(selector).offset().top-50};
-  $('html,body').animate(animation, 'slow', 'swing', function() {
-    if (typeof callback == 'function') {
-      callback();
-    }
-    callback = null;
-  });
-}
 
 $(document).foundation();

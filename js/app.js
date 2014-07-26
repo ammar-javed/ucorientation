@@ -35,7 +35,7 @@ $(document).ready(function(){
     mode: "fade",
     adaptiveHeight: true,
     controls: false,
-    pager: true
+    pager: false
   });
 
   registrationSlider = $('.registration-slider').bxSlider({
@@ -79,13 +79,13 @@ $(document).ready(function(){
           }
         }); 
       });
-  $("#history-link").click(function() {
+  $("#history-link").on('click', function() {
     aboutslider.goToSlide(0);
   });
-  $("#residence-link").click(function() {
+  $("#residence-link").on('click', function() {
     aboutslider.goToSlide(1);
   });
-  $("#commuter-link").click(function() {
+  $("#commuter-link").on('click', function() {
     aboutslider.goToSlide(2);
   });
 
@@ -93,11 +93,15 @@ $(document).ready(function(){
     registrationSlider.redrawSlider();
   });
 
-  $('#form-one :input').on('vaild', function(){
+  $('#form-one :input').on('valid', function(){
     registrationSlider.redrawSlider();
   });
 
-  $('#payment-form').on('valid', function(){
+  $('#payment-form :input').on('valid', function(){
+    registrationSlider.redrawSlider();
+  });
+
+  $('#payment-form :input').on('invalid', function(){
     registrationSlider.redrawSlider();
   });
 
@@ -130,6 +134,7 @@ $(document).ready(function(){
         if (reply.result == "success")
         {
           registrationSlider.goToSlide(1);
+          scrollToElement('#regInfo');
         } else {
           $.each(reply, function(i, val) {
             $("." + i).addClass(" " + val);

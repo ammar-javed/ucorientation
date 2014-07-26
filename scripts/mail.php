@@ -4,24 +4,23 @@ require 'PHPMailerAutoload.php';
 $resultArray = array();
 
 if($_POST['name'] && $_POST['email'] && $_POST['message']) {
-	$mail = new PHPMailer;
+	$mail = new PHPMailer();
 
 	$mail->IsSMTP();
-	$mail->Host = 'localhost';
 
 	$mail->SMTPAuth = true;
+	$mail->CharSet="UTF-8";
 	$mail->SMTPSecure = 'tls';
-	$mail->Host = 'smtp.gmail.com';
-	$mail->Port = 587;
+	$mail->Host = 'smtpout.secureserver.net';
+	$mail->Port = 25;
 
-	$mail->Username = 'orientation.registration@uclit.ca';
-	$mail->Password = 'fuckingTITS';
+	$mail->Username = 'contact@ucorientation.com';
+	$mail->Password = 'contact';
 
-	//$mail->From = $_POST['email'];
-	$mail->SetFrom($_POST['email'], $_POST['name']);
+	$mail->SetFrom('contact@ucorientation.com', $_POST['name']);
 	$mail->FromName = 'UC Orientation Contact Form';
-	$mail->addAddress('orientation@uclit.ca', 'Co-Chairs');
-	$mail->addCC('orientation.registration@uclit.ca');
+	$mail->addAddress('ammarj965@gmail.com', 'Co-Chairs');
+	$mail->addAddress('orientation.registration@uclit.ca', 'Registration');
 	$mail->AddReplyTo($_POST['email'], $_POST['name']);
 
 	$mail->WordWrap = 70;
@@ -31,7 +30,7 @@ if($_POST['name'] && $_POST['email'] && $_POST['message']) {
 	$mail->Body .= "Message: " . $_POST['message'] . "<br>";
 	$mail->Body .= "<br><br> Note: Just reply to this e-mail to send a reply straight to the Contacting Person.";
 	$mail->IsHTML(true);
-
+	
 	if(!$mail->send())
 	{
 		$resultArray['result'] = 'error';

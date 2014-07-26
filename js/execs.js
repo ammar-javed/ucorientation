@@ -211,7 +211,7 @@ $(window).scroll(function(event) {
         		    	my: 'bottom center',
         		    	at: 'top center',
         		    	target: 'mouse',
-        		    	viewport: $('#execs-div'),
+        		    	viewport: $(window),
         		    	adjust: {
         		    		mouse: true,
         		    		scroll: false

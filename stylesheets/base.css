@@ -33,20 +33,23 @@ h3 .whitney {
 	height:45px;
 }
 .header-image-static {
-	background:#333333 url("../images/header2.jpg");
-	position: float;
+	background:#333333 url("../images/header2.jpg") 0 20%;
+	position: relative;
 	color:#6a6969;
-	background-size: 100%;
-	height: 500px;
+	background-size: cover;
+	height: 60%;
+	min-height: 400px;
 	background-repeat: no-repeat;
+}
+.helper{
+	display: inline-block;
+	height: 20%;
+	vertical-align: middle;
 }
 .header-logo-page {
 	display: block;
 	margin: auto;
-	padding: 60px;
-}
-.top-bar {
-	height: 50px;
+	vertical-align: middle;
 }
 nav.top-bar {
 	text-align:center;
@@ -54,15 +57,18 @@ nav.top-bar {
 section.top-bar-section {
 	display: inline-block;
 	font-size: 15pt;
+	padding: 0px;
 }
-.top-bar-link a {
+.mobile, .nonmobile {
+	display:none;
+}
+/*.top-bar-link a {
 	color: #ffffff;
 }
 .top-bar-section ul li > a {
-	font-family: VarsityRegular;
-	font-size: 15pt;
+	font-size: 12pt;
 	color: white;
-}
+}*/
 .top-bar-name {
 	color: #990000 !important;
 }

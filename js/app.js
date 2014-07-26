@@ -5,6 +5,32 @@ var aboutslider;
 var gallery;
 var contactSlider;
 
+// media query event handler
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 79.689em)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+
+  if (mq.matches) 
+  {
+    $('.placeholder').replaceWith("<li class='name placeholder'><h1 style='font-size:30pt;'><a class='header-name' style='color: #8B0000;'>monsters</a></h1></li><li class='headercenter'><img src='images/favicon.png' class='header-logo'/></li><li class='name headercenter'><h1 style='font-size:30pt;'><a class='header-name' style='color: #8B0000;'>university</a></h1></li>");
+    $('.titleleft').remove();
+    $('.menu-icon').remove();
+    $('nav.top-bar').css('text-align', 'center');
+  }
+  else 
+  {
+    $('nav.top-bar').css('text-align', 'left');
+    $('.title-area').append("<li class='name titleleft'><h1 style='font-size:30pt;'><a class='header-name' style='color: #8B0000;'>monsters<img src='images/favicon.png' class='header-logo headerleft'/>university</a></h1></li><li class='toggle-topbar menu-icon'><a href='#''><span>Menu</span></a></li>");
+    $('.placeholder').replaceWith("<li class='placeholder'></li>");
+    $('.headercenter').remove();
+  }
+};
+
 var showRegSlider = function() {
   $('#form-one')[0].reset();
   $('#payment-form')[0].reset();

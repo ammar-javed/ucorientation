@@ -14,7 +14,7 @@ $include-html-top-bar-classes: $include-html-classes !default;
 // Background color for the top bar
 $topbar-bg-color: #333 !default;
 $topbar-bg: $topbar-bg-color !default;
-$topbar-bg-image: url("../images/page-bg.jpg") !default;
+$topbar-bg-image: #333 !default;
 
 // Height and margin
 $topbar-height: 50px !default;
@@ -71,8 +71,8 @@ $topbar-menu-icon-color-toggled: #888 !default;
 // Transitions and breakpoint styles
 $topbar-transition-speed: 300ms !default;
 // Using rem-calc for the below breakpoint causes issues with top bar
-$topbar-breakpoint: #{lower-bound($medium-range)} !default; // Change to 9999px for always mobile layout
-$topbar-media-query: $medium-up !default;
+$topbar-breakpoint: #{lower-bound($large-range)} !default; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";//$medium-up !default;
 
 // Divider Styles
 $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%) !default;
@@ -254,7 +254,7 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
         height: auto;
         background: transparent;
 
-        .title-area { background: $topbar-bg; }
+        .title-area { background: $topbar-bg; vertical-align:middle; }
 
         .toggle-topbar {
           a { color: $topbar-menu-link-color-toggled;

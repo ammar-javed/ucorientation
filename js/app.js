@@ -5,14 +5,14 @@ var aboutslider;
 var gallery;
 var contactSlider;
 
-var showRegSlider = function() {
+var showRegSlider = function () {
   $('#form-one')[0].reset();
   $('#payment-form')[0].reset();
   $('#registration').show();
   scrollToElement('#registration');
 }
 
-var hideReg = function(){
+var hideReg = function () {
   $('#form-one')[0].reset();
   $('#payment-form')[0].reset();
   $('#registration').hide(500);
@@ -93,7 +93,8 @@ gallery = $('.gallery').bxSlider({
   auto: true,
   autoControls: true,
   autoControlsCombine: true,
-  pager: false
+  pager: false,
+  preloadImages: 'all'
 });
 contactSlider = $('.contact').bxSlider({
   mode: "fade",
@@ -161,6 +162,7 @@ $input.keyup(function() {
     }
   });
   trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
+
 });
 
 $('#registerNext').click(function(){

@@ -12,7 +12,7 @@
       custom_back_text: true,
       back_text: 'Back',
       is_hover: true,
-      scrolltop : true, // jump to top when sticky nav menu toggle is clicked
+      scrolltop : false, // jump to top when sticky nav menu toggle is clicked
       sticky_on : 'all'
     },
     

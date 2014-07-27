@@ -55,20 +55,8 @@ nav.top-bar {
 	text-align:center;
 }
 section.top-bar-section {
-	display: inline-block;
 	font-size: 15pt;
-	padding: 0px;
 }
-.mobile, .nonmobile {
-	display:none;
-}
-/*.top-bar-link a {
-	color: #ffffff;
-}
-.top-bar-section ul li > a {
-	font-size: 12pt;
-	color: white;
-}*/
 .top-bar-name {
 	color: #990000 !important;
 }

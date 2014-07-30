@@ -78,24 +78,24 @@ $(document).ready(function() {
         {
             title: 'BBQ With The Dons',
             start: '2014-09-01T12:30:00',
-            end: '2014-09-01T14:00:00',
+            end: '2014-09-01T14:30:00',
             description: "Energy Level: <span id='text-imp'>Low<br><br>The Dons are the community coordinators for your residence. They will tell you everything you need to know about living in residence and the resources that they can offer you.<br><br> Enjoy a BBQ while they tell you everything you need to know about UC residence house life!</span>"
         },
         {
             title: 'FYI: Survival Guide',
-            start: '2014-09-01T14:00:00',
-            end: '2014-09-01T17:00:00',
+            start: '2014-09-01T14:30:00',
+            end: '2014-09-01T17:30:00',
             description: "Energy Level: <span id='text-imp'>Low<br><br>Nervous about your first year? We’ve got you covered!<br><br>Learn about the UC community, chat with upper years about first year tips & tricks, and get some useful academic advice.</span>"
         },
         {
             title: 'Dinner',
             start: '2014-09-01T17:30:00',
-            end: '2014-09-01T19:30:00',
+            end: '2014-09-01T20:00:00',
             description: "Energy Level: <span id='text-imp'>Mmmm dinner</span>"
         },
         {
             title: 'Commuter Meet-Up',
-            start: '2014-09-01T19:30:00',
+            start: '2014-09-01T20:00:00',
             end: '2014-09-01T21:00:00',
             description: "Energy Level: <span id='text-imp'>Medium<br><br>Does the university commuting experience seem scary and obscure? Don’t be frightened by the endless subway tunnels that lie in your future! Embrace the off-campus life! <br><br>Join the University College Off-Campus Commission and meet other first year and upper year commuters at this commuter social event.</span>"
         },

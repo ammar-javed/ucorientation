@@ -385,51 +385,7 @@
           <button type='button' style='margin-left:3px;margin-top:5px;' id='registerNext'>Next</button>
         </form>
       </div>
-      <!--Slide 2-->
-      <div>
-        <form action="" data-abide method="POST" id="payment-form">
-          <h4>payment information</h4>
-          <p>Current Price <span id='text-imp'>$105.00</span></p>
-          <span class="payment-errors"></span><br>
-          <div class='row'>
-            <div class="small-6 columns number">
-              <label>Card Number<small>Required</small>
-                <input type='text' maxlength='20' required data-stripe='number'>
-              </label>
-              <small class="error">Please enter your credit card number!</small>
-            </div>
-            <div class="small-2 columns cvc end">
-              <label>CVC<small>Required</small>
-                <input type='text' required maxlength='4' data-stripe='cvc'>
-              </label>
-              <small class="error">You can find your CVC on the back of the card!</small>
-            </div>
-          </div>
-
-          <div class='row'>
-            <div class="small-2 columns">
-              <div class='exp-month'>
-                <label>Exp (mm)<small>Required</small>
-                  <input type='text' required maxlength='2' data-stripe='exp-month'>
-                </label>
-                <small class="error">Your card's expiry month</small>
-              </div>
-            </div>
-            <div class='small-2 columns end'>
-              <div class='exp-year'>
-                <label>Exp (yyyy)<small>Required</small>
-                  <input type='text' required maxlength='4' data-stripe='exp-year'>
-                </label>
-                <small class="error">Your card's expiry year</small>
-              </div>
-            </div>
-          </div>
-
-          <a class='button alert' onClick='hideReg()'>Cancel</a>
-          <button type="submit" style='margin-left:3px;' id='finalizeReg'>Submit Payment</button>
-        </form>
-      </div>
-      <!--Slide 3: Processing-->
+      <!--Slide 2: Processing-->
       <div>
         <img id='processing-img' src="images/registration/loading.gif" />
         <h3 style="position:relative;">please wait a moment while we finish your registration</h3>
@@ -537,8 +493,9 @@
   <script type="text/javascript" src='bower_components/fullcalendar/fullcalendar.js'></script>
   <!--qTip-->
   <script type="text/javascript" src='bower_components/qtip/jquery.qtip.min.js'></script>
-  <!--Stripe-->
+  <!--Stripe/Checkout-->
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
   <!--Registration-->
   <script type="text/javascript" src="js/finalizeRegist.js"></script>
   <!--Gallery-->

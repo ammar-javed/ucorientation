@@ -7,14 +7,12 @@ var contactSlider;
 
 var showRegSlider = function () {
   $('#form-one')[0].reset();
-  $('#payment-form')[0].reset();
   $('#registration').show();
   scrollToElement('#registration');
 }
 
 var hideReg = function () {
   $('#form-one')[0].reset();
-  $('#payment-form')[0].reset();
   $('#registration').hide(500);
   registrationSlider.goToSlide(0);
 }
@@ -168,39 +166,6 @@ $input.keyup(function() {
   trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
 
 });
-
-$('#registerNext').click(function(){
-    //Let script know a form was sent
-    $("#form-one").append("<input type='hidden' name='form' value='true' />");
-    //serialize and send
-    formData = $('#form-one').serialize();
-    $.ajax({
-      url : 'scripts/register_validation.php',
-      type: 'POST',
-      data: formData,
-      success: function(data, textStatus, jqXHR){
-        var reply = JSON.parse(data);
-        var topError;
-        if (reply.result == "success")
-        {
-          registrationSlider.goToSlide(1);
-          scrollToElement('#regInfo');
-        } else {
-          $.each(reply, function(i, val) {
-            $("." + i).addClass(" " + val);
-            if(!topError){
-              topError = "."+i;
-            }
-          });
-          registrationSlider.redrawSlider();
-          scrollToElement(topError);
-        }
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        registrationSlider.goToSlide(3);
-      }
-    });
-  });
 
 $('#contact-form').submit(function(e) {
   var $form = $(this);

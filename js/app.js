@@ -52,6 +52,8 @@ function WidthChange(mq) {
     $('.menu-icon').remove();
     $('nav.top-bar').css('text-align', 'center');
     $('#section').css('display', 'inline-block');
+    $('#sideBar').show();
+    $('#social').hide();
   }
   else 
   {
@@ -60,6 +62,8 @@ function WidthChange(mq) {
     $('.placeholder').replaceWith("<li class='placeholder'></li>");
     $('.headercenter').remove();
     $('#section').css('display', 'block');
+    $('#sideBar').hide();
+    $('#social').show();
   }
 }
 

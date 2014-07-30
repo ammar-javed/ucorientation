@@ -19,8 +19,10 @@ if($_POST['name'] && $_POST['email'] && $_POST['message']) {
 
 	$mail->SetFrom('contact@ucorientation.com', $_POST['name']);
 	$mail->FromName = 'UC Orientation Contact Form';
-	$mail->addAddress('ammarj965@gmail.com', 'Co-Chairs');
-	$mail->addAddress('orientation.registration@uclit.ca', 'Registration');
+	$mail->addAddress('orientation@uclit.ca', 'Co-Chairs');
+	$mail->AddCC('orientation.registration@uclit.ca', 'Registration');
+	$mail->AddCC('uc.orientation.register@gmail.com', 'Registration');
+	$mail->AddCC('ucoc@uclit.ca', 'UCOC');
 	$mail->AddReplyTo($_POST['email'], $_POST['name']);
 
 	$mail->WordWrap = 70;

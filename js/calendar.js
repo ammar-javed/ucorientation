@@ -139,7 +139,7 @@ $(document).ready(function() {
             title: 'Club Night',
             start: '2014-09-02T22:00:00',
             end: '2014-09-03T01:00:00',
-            description: "Energy Level: <span id='text-imp'>Low <br><br>Let loose at one of Toronto’s hottest night clubs, and spend the night dancing away with friends and leaders.</span>"
+            description: "Energy Level: <span id='text-imp'>High <br><br>Let loose at one of Toronto’s hottest night clubs, and spend the night dancing away with friends and leaders.</span>"
         },
         {
             title: 'Zombie Games',
@@ -259,7 +259,7 @@ $(document).ready(function() {
             title: 'UTSU Club Night',
             start: '2014-09-05T22:00:00',
             end: '2014-09-06T01:00:00',
-            description: "Energy Level: <span id='text-imp'>Low <br><br>Let loose at one of Toronto’s hottest night clubs, and spend the night dancing away with friends and leaders.</span>"
+            description: "Energy Level: <span id='text-imp'>High <br><br>Let loose at one of Toronto’s hottest night clubs, and spend the night dancing away with friends and leaders.</span>"
         },
         {
             title: 'Breakfast in Common Rooms',

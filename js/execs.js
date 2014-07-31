@@ -141,7 +141,7 @@ $(window).scroll(function(event) {
 			{
 				fname: "cyrus",
 				lname: "silverstrider",
-				events: "Events: <span id='text-imp'>Meals, FYI:UofT</span>",
+				events: "Events: <span id='text-imp'>Meals, FYI: Survival Guide</span>",
 				description: "Nickname: <span id='text-imp'> Cy</span><br><br>Program: <span id='text-imp'> English</span><br><br>Favourite Part of UC Orientation: <br><span id='text-imp'> Doin' It In The Dot - it's fun to explore Toronto! </span><br><br>You are spending the night in a haunted house. What is the one thing you choose to take with you? <br><span id='text-imp'>  Popcorn. </span><br><br>If you could be any monster, which would you choose? <br><span id='text-imp'> A vampire. Team Edward!</span>",
 				image: "images/team/Cyrus.jpg"
 			},

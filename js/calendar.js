@@ -61,7 +61,7 @@ $(document).ready(function() {
             title: 'Registration/Breakfast',
             start: '2014-09-01T08:00:00',
             end: '2014-09-01T10:00:00',
-            description: "Energy Level: <span id='text-imp'>Low<br><br>Complete the registration process and pick up your frosh kits! Please note that registration will finish at 10am, so don’t be late!</span>"
+            description: "Energy Level: <span id='text-imp'>Low<br><br>Complete the registration process and pick up your frosh kits! Please note that registration will finish at 10am, so don’t be late!</span><br><br>Meal: <span id='text-imp'>Continental</span>"
         },
         {
             title: 'Opening Ceremonies',
@@ -88,10 +88,10 @@ $(document).ready(function() {
             description: "Energy Level: <span id='text-imp'>Low<br><br>Nervous about your first year? We’ve got you covered!<br><br>Learn about the UC community, chat with upper years about first year tips & tricks, and get some useful academic advice.</span>"
         },
         {
-            title: 'Dinner',
+            title: 'Dinner and Leader Tours',
             start: '2014-09-01T17:30:00',
             end: '2014-09-01T20:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span><br><br>Meal: <span id='text-imp'>Lasagna</span>"
         },
         {
             title: 'Commuter Meet-Up',
@@ -109,13 +109,13 @@ $(document).ready(function() {
             title: 'Breakfast',
             start: '2014-09-02T08:30:00',
             end: '2014-09-02T10:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span><br><br>Meal: <span id='text-imp'>Fung breakfast</span>"
         },
         {
             title: 'UC Day',
             start: '2014-09-02T10:00:00',
             end: '2014-09-02T14:30:00',
-            description: "Energy Level: <span id='text-imp'>Low<br><br>Let the Registrar tell you everything that UC has to offer. Sessions include: workshops by the Writing Centre, “Meet the Lit”, and a special re-enactment of UC History.</span>"
+            description: "Energy Level: <span id='text-imp'>Low<br><br>Let the Registrar tell you everything that UC has to offer. Sessions include: workshops by the Writing Centre, “Meet the Lit”, and a special re-enactment of UC History.</span><br><br>Meal: <span id='text-imp'>Subs</span>"
         },
         {
             title: "Doin' It In The Dot",
@@ -127,7 +127,7 @@ $(document).ready(function() {
             title: 'Pizza Dinner/Bring It On Prep',
             start: '2014-09-02T17:00:00',
             end: '2014-09-02T19:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm pizza</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm pizza</span><br><br>Meal: <span id='text-imp'>Might be pizza...not sure..</span>"
         },
         {
             title: 'Bring It On',
@@ -151,7 +151,7 @@ $(document).ready(function() {
             title: 'Breakfast',
             start: '2014-09-03T09:00:00',
             end: '2014-09-03T10:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span><br><br>Meal: <span id='text-imp'>Fung breakfast</span>"
         },
         {
             title: 'UTSU Clubs Fair',
@@ -169,13 +169,13 @@ $(document).ready(function() {
             title: 'Beach',
             start: '2014-09-03T13:00:00',
             end: '2014-09-03T18:30:00',
-            description: "Energy Level: <span id='text-imp'>Medium<br><br>Frosh and leaders can enjoy a day of fun and relaxation at Woodbine Beach! We have inflatables, sports, music and the perfect opportunity for relaxation. <br><br>Make sure to bring comfy beach clothes, sunscreen and a water bottle!</span>"
+            description: "Energy Level: <span id='text-imp'>Medium<br><br>Frosh and leaders can enjoy a day of fun and relaxation at Woodbine Beach! We have inflatables, sports, music and the perfect opportunity for relaxation. <br><br>Make sure to bring comfy beach clothes, sunscreen and a water bottle!</span><br><br>Meal: <span id='text-imp'>Ali Baba's Shwaramas</span>"
         },
         {
             title: 'Dinner',
             start: '2014-09-03T18:30:00',
             end: '2014-09-03T20:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span><br><br>Meal: <span id='text-imp'>Lick's BBQ</span>"
         },
         {
             title: 'Open Mic Night',
@@ -187,7 +187,7 @@ $(document).ready(function() {
             title: 'Breakfast',
             start: '2014-09-04T09:00:00',
             end: '2014-09-04T10:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span><br><br>Meal: <span id='text-imp'>Fung breakfast</span>"
         },
         {
             title: 'Tradition',
@@ -211,7 +211,7 @@ $(document).ready(function() {
             title: 'Order in Dinner/Bring It On Prep',
             start: '2014-09-04T19:00:00',
             end: '2014-09-04T21:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span><br><br>Meal: <span id='text-imp'>What ever you decide with the house!</span>"
         },
         {
             title: 'Haunted Carnival',
@@ -223,7 +223,7 @@ $(document).ready(function() {
             title: 'Breakfast',
             start: '2014-09-05T10:00:00',
             end: '2014-09-05T11:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span><br><br>Meal: <span id='text-imp'>Fung brunch</span>"
         },
         {
             title: 'Parade Prep Rally',
@@ -241,7 +241,7 @@ $(document).ready(function() {
             title: 'Dinner',
             start: '2014-09-05T17:00:00',
             end: '2014-09-05T19:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm dinner</span><br><br>Meal: <span id='text-imp'>Mr. Greek</span>"
         },
         {
             title: 'Bring It On Round 2',
@@ -265,7 +265,7 @@ $(document).ready(function() {
             title: 'Breakfast in Common Rooms',
             start: '2014-09-06T09:00:00',
             end: '2014-09-06T10:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm breakfast</span><br><br>Meal: <span id='text-imp'>Continental</span>"
         },
         {
             title: 'Be The Change Presentation',
@@ -277,7 +277,7 @@ $(document).ready(function() {
             title: 'Lunch',
             start: '2014-09-06T11:00:00',
             end: '2014-09-06T12:00:00',
-            description: "Energy Level: <span id='text-imp'>Mmmm lunch</span>"
+            description: "Energy Level: <span id='text-imp'>Mmmm lunch</span><br><br>Meal: <span id='text-imp'>Pizza</span>"
         },
         {
             title: 'Be The Change',
@@ -301,7 +301,7 @@ $(document).ready(function() {
             title: 'Red and White: Monster Ball',
             start: '2014-09-06T20:00:00',
             end: '2014-09-07T01:00:00',
-            description: "Energy Level: <span id='text-imp'>High<br><br>Ditch your frosh tees and get dolled up for our semi-formal where the monsters come out to play, the food is delicious and the dancing never stops!</span>"
+            description: "Energy Level: <span id='text-imp'>High<br><br>Ditch your frosh tees and get dolled up for our semi-formal where the monsters come out to play, the food is delicious and the dancing never stops!</span><br><br>Meal: <span id='text-imp'>Buffet</span>"
         }
         ]
     });

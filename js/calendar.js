@@ -78,18 +78,18 @@ $(document).ready(function() {
         {
             title: 'BBQ With The Dons',
             start: '2014-09-01T12:30:00',
-            end: '2014-09-01T14:30:00',
+            end: '2014-09-01T14:00:00',
             description: "Energy Level: <span id='text-imp'>Low<br><br>The Dons are the community coordinators for your residence. They will tell you everything you need to know about living in residence and the resources that they can offer you.<br><br> Enjoy a BBQ while they tell you everything you need to know about UC residence house life!</span>"
         },
         {
             title: 'FYI: Survival Guide',
-            start: '2014-09-01T14:30:00',
-            end: '2014-09-01T17:30:00',
+            start: '2014-09-01T14:00:00',
+            end: '2014-09-01T17:00:00',
             description: "Energy Level: <span id='text-imp'>Low<br><br>Nervous about your first year? We’ve got you covered!<br><br>Learn about the UC community, chat with upper years about first year tips & tricks, and get some useful academic advice.</span>"
         },
         {
             title: 'Dinner and Leader Tours',
-            start: '2014-09-01T17:30:00',
+            start: '2014-09-01T17:00:00',
             end: '2014-09-01T20:00:00',
             description: "Energy Level: <span id='text-imp'>Mmmm dinner</span><br><br>Meal: <span id='text-imp'>Lasagna</span>"
         },
@@ -196,9 +196,15 @@ $(document).ready(function() {
             description: "Energy Level: <span id='text-imp'>High<br><br>Classified.</span>"
         },
         {
-            title: 'PRE UofT',
+            title: 'Lunch With Your Program',
             start: '2014-09-04T12:00:00',
-            end: '2014-09-04T16:30:00',
+            end: '2014-09-04T13:00:00',
+            description: "Energy Level: <span id='text-imp'>Mmm breakfast</span><br><br>Meal: <span id='text-imp'>Burritos</span>"
+        },
+        {
+            title: 'PRE UofT',
+            start: '2014-09-04T13:00:00',
+            end: '2014-09-04T16:00:00',
             description: "Energy Level: <span id='text-imp'>Low<br><br>It is a widely accepted truth that UC is home to the greatest and best looking people at U of T. <br><br>However, this event will give you the opportunity to make friends in your program from other colleges! Students will be divided into their programs and participate in a faculty panel, icebreakers, and a course union resource fair within this inter-collegiate event. <br><br>Join us for our first Program Exposure event at U of T!</span>"
         },
         {

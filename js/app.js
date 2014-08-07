@@ -17,6 +17,11 @@ var hideReg = function () {
   registrationSlider.goToSlide(0);
 }
 
+var cancelReg = function () {
+  scrollToElement('#regInfo');
+  hideReg();
+}
+
 var scrollToElement = function(selector, callback){
   var animation = {scrollTop: $(selector).offset().top - 50};
   $('html,body').animate(animation, 'slow', 'swing', function() {

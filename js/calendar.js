@@ -126,13 +126,13 @@ $(document).ready(function() {
         {
             title: 'Pizza Dinner/Bring It On Prep',
             start: '2014-09-02T17:00:00',
-            end: '2014-09-02T19:00:00',
+            end: '2014-09-02T18:30:00',
             description: "Energy Level: <span id='text-imp'>Mmmm pizza</span><br><br>Meal: <span id='text-imp'>Might be pizza...not sure..</span>"
         },
         {
             title: 'Bring It On',
-            start: '2014-09-02T19:00:00',
-            end: '2014-09-02T21:00:00',
+            start: '2014-09-02T18:30:00',
+            end: '2014-09-02T20:30:00',
             description: "Energy Level: <span id='text-imp'>Medium<br><br>Show your UC spirit in a cheer-off to determine which UC house has what it takes to be on top! Dance, scream, and shout your way to first place.<br><br> This is a competition between UC houses for the spot of Bring it On champ!</span>"
         },
         {
@@ -306,7 +306,7 @@ $(document).ready(function() {
         {
             title: 'Red and White: Monster Ball',
             start: '2014-09-06T20:00:00',
-            end: '2014-09-07T01:00:00',
+            end: '2014-09-07T00:00:00',
             description: "Energy Level: <span id='text-imp'>High<br><br>Ditch your frosh tees and get dolled up for our semi-formal where the monsters come out to play, the food is delicious and the dancing never stops!</span><br><br>Meal: <span id='text-imp'>Buffet</span>"
         }
         ]
